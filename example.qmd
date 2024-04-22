@@ -1,0 +1,15 @@
+---
+title: "Mastodon-comments Example"
+filters:
+  - mastodon-comments
+share:
+  user: "AndreasThinks"
+  host: "fosstodon.org"
+  toot_id: "111995180253316042"
+---
+
+## Heading
+
+This filter adds formatting to heading text.
+
+

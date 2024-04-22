@@ -1,13 +1,10 @@
 # Mastodon-comments Extension For Quarto
-
-_TODO_: Add a short description of your extension.
+This extension adds Mastodon Comments enabled by [dpecos' implementation.](https://github.com/dpecos/mastodon-comments?tab=readme-ov-file)
 
 ## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
-
-```bash
-quarto add <github-organization>/mastodon-comments
+```sh
+quarto install extension AndreasThinks/quarto-mastodon-comments
 ```
 
 This will install the extension under the `_extensions` subdirectory.
@@ -15,9 +12,14 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-_TODO_: Describe how to use your extension.
+Add the following to the yaml header of your document.
+You can set options to `false` if you don't want to display the respective share button.
 
-## Example
-
-Here is the source code for a minimal example: [example.qmd](example.qmd).
-
+```yaml
+filters:
+  - mastodon-comments
+share:
+  user: "AndreasThinks"
+  host: "fosstodon.org"
+  toot_id: "111995180253316042"
+```

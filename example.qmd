@@ -2,7 +2,7 @@
 title: "Mastodon-comments Example"
 filters:
   - mastodon-comments
-share:
+mastodon_comments:
   user: "AndreasThinks"
   host: "fosstodon.org"
   toot_id: "111995180253316042"

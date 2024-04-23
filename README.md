@@ -1,5 +1,5 @@
 # Mastodon-comments Extension For Quarto
-This extension adds Mastodon Comments enabled by [dpecos' implementation.](https://github.com/dpecos/mastodon-comments?tab=readme-ov-file)
+This extension adds Mastodon Comments based on [the excellent webcomponent by dpecos.](https://github.com/dpecos/mastodon-comments?tab=readme-ov-file)
 
 ## Installing
 
@@ -12,13 +12,12 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-Add the following to the yaml header of your document.
-You can set options to `false` if you don't want to display the respective share button.
+Create a Mastodon post about your content, and then add the below to your post, with the relevant username, server and toot id.
 
 ```yaml
 filters:
   - mastodon-comments
-share:
+mastodon_comments:
   user: "AndreasThinks"
   host: "fosstodon.org"
   toot_id: "111995180253316042"

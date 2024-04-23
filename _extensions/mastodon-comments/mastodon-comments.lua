@@ -8,10 +8,10 @@ end
 
 function Meta(m)
   ensureHtmlDeps()
-  if m.share and m.share.user and m.share.toot_id and m.share.host then
-      local user = pandoc.utils.stringify(m.share.user)
-      local toot_id = pandoc.utils.stringify(m.share.toot_id)
-      local host = pandoc.utils.stringify(m.share.host)
+  if m.mastodon_comments and m.mastodon_comments.user and m.mastodon_comments.toot_id and m.mastodon_comments.host then
+      local user = pandoc.utils.stringify(m.mastodon_comments.user)
+      local toot_id = pandoc.utils.stringify(m.mastodon_comments.toot_id)
+      local host = pandoc.utils.stringify(m.mastodon_comments.host)
       local mastodon_html = '<mastodon-comments host="' .. host .. '" user="' .. user .. '" tootId="' .. toot_id .. '" style="width : 1024px"></mastodon-comments>'
 
       -- JavaScript to inject Mastodon comments into a specific div

@@ -23,6 +23,16 @@ function Meta(m)
 
       -- Insert these elements in the document's head
       quarto.doc.includeText("in-header", script_html .. css_html)
+
+      -- JavaScript variable definitions
+      local js_vars = '<script type="text/javascript">\n' ..
+      'var mastodonHost = "' .. host .. '";\n' ..
+      'var mastodonUser = "' .. user .. '";\n' ..
+      'var mastodonTootId = "' .. toot_id .. '";\n' ..
+      '</script>'
+
+      -- Include JavaScript variables and Mastodon comments HTML in the header and after the body
+      quarto.doc.includeText("in-header", js_vars)
       
   end
 end

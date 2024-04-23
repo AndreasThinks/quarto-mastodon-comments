@@ -118,9 +118,10 @@ class MastodonComments extends HTMLElement {
   constructor() {
     super();
 
-    this.host = this.getAttribute("host");
-    this.user = this.getAttribute("user");
-    this.tootId = this.getAttribute("tootId");
+    // Retrieve the host, user, and tootId from global variables
+    this.host = mastodonHost; // Previously this.getAttribute("host")
+    this.user = mastodonUser; // Previously this.getAttribute("user")
+    this.tootId = mastodonTootId; // Previously this.getAttribute("tootId")
 
     this.commentsLoaded = false;
 
@@ -128,6 +129,7 @@ class MastodonComments extends HTMLElement {
     styleElem.innerHTML = styles;
     document.head.appendChild(styleElem);
   }
+
 
   connectedCallback() {
     this.innerHTML = `

@@ -18,6 +18,7 @@ const styles = `
 
 #mastodon-comments-list {
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .mastodon-comment {
@@ -133,7 +134,7 @@ class MastodonComments extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <div id="mastodon-stats"></div>
+
       <h2>Comments</h2>
 
       <noscript>
@@ -141,10 +142,10 @@ class MastodonComments extends HTMLElement {
           Please enable JavaScript to view the comments powered by the Fediverse.
         </div>
       </noscript>
-
       <p>You can use your Fediverse (i.e. Mastodon, among many others) account to reply to this <a class="link"
           href="https://${this.host}/@${this.user}/${this.tootId}">post</a>.
       </p>
+       <div id="mastodon-stats"></div>
       <p id="mastodon-comments-list"></p>
     `;
 

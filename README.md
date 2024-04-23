@@ -1,5 +1,5 @@
 # Mastodon-comments for Quarto
-This extension adds Mastodon Comments based on [the excellent webcomponent by dpecos.](https://github.com/dpecos/mastodon-comments?tab=readme-ov-file)
+This extension adds Mastodon Comments based on [the excellent webcomponent by dpecos.](https://github.com/dpecos/mastodon-comments?tab=readme-ov-file) You can see (and leave a comment on) a [working example on my blog here.](https://andreasthinks.me/posts/quarto_comments/)
 
 ## Installing
 

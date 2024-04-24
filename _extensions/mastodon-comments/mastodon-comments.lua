@@ -12,7 +12,7 @@ function Meta(m)
       local user = pandoc.utils.stringify(m.mastodon_comments.user)
       local toot_id = pandoc.utils.stringify(m.mastodon_comments.toot_id)
       local host = pandoc.utils.stringify(m.mastodon_comments.host)
-      local mastodon_html = '<mastodon-comments host="' .. host .. '" user="' .. user .. '" tootId="' .. toot_id .. '" style="width : 1024px"></mastodon-comments>'
+      local mastodon_html = '<mastodon-comments host="' .. host .. '" user="' .. user .. '" tootId="' .. toot_id .. '"></mastodon-comments>'
 
       -- JavaScript to inject Mastodon comments into a specific div
       local inject_script = [[

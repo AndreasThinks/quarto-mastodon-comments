@@ -1,7 +1,7 @@
 local function ensureHtmlDeps()
   quarto.doc.addHtmlDependency({
       name = 'mastodon-comments',
-      version = '1.0.0',
+      version = '1.0.2',
       scripts = {"mastodon-comments.js"},
   })
 end

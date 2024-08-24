@@ -12,7 +12,9 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-Create a Mastodon post about your content, and then add the below to your post, with the relevant username, server and toot id.
+1. To add comments to your post, you must first create a post about your content (for example, an announcement post). You can click on this post to obtain the relevant "toot id" from the URL.
+2. Create a post on your quarto blog, and add the below to your post, with the relevant username, server and toot id.
+3. Render and publish your post. You should now see the comments section at the bottom of your post.
 
 ```yaml
 filters:

@@ -119,10 +119,9 @@ class MastodonComments extends HTMLElement {
   constructor() {
     super();
 
-    // Retrieve the host, user, and tootId from global variables
-    this.host = mastodonHost; // Previously this.getAttribute("host")
-    this.user = mastodonUser; // Previously this.getAttribute("user")
-    this.tootId = mastodonTootId; // Previously this.getAttribute("tootId")
+    this.host = mastodonHost;
+    this.user = mastodonUser;
+    this.tootId = mastodonTootId;
 
     this.commentsLoaded = false;
 
@@ -131,12 +130,9 @@ class MastodonComments extends HTMLElement {
     document.head.appendChild(styleElem);
   }
 
-
   connectedCallback() {
     this.innerHTML = `
-
       <h2>Comments</h2>
-
       <noscript>
         <div id="error">
           Please enable JavaScript to view the comments powered by the Fediverse.
@@ -145,7 +141,7 @@ class MastodonComments extends HTMLElement {
       <p>You can use your Fediverse (i.e. Mastodon, among many others) account to reply to this <a class="link"
           href="https://${this.host}/@${this.user}/${this.tootId}">post</a>.
       </p>
-       <div id="mastodon-stats"></div>
+      <div id="mastodon-stats"></div>
       <p id="mastodon-comments-list"></p>
     `;
 
@@ -154,7 +150,9 @@ class MastodonComments extends HTMLElement {
     if (rootStyle) {
       comments.setAttribute("style", rootStyle);
     }
-    this.respondToVisibility(comments, this.loadComments.bind(this));
+    
+    // Load comments immediately instead of using lazy loading
+    this.loadComments();
   }
 
   escapeHtml(unsafe) {
